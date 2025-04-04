@@ -4,9 +4,9 @@ import srcs.Coordinates;
 
 public class Baloon extends Aircraft
 {
-	public Baloon(long id_, String name_, Coordinates coordinates_)
+	public Baloon(long p_id, String p_name, Coordinates p_coordinates)
 	{
-		super(id_, name_, coordinates_);
+		super(p_id, p_name, p_coordinates);
 	}
 
 	public void updateConditions(String weather)

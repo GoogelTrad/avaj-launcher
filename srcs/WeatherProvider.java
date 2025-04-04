@@ -4,7 +4,7 @@ public class WeatherProvider {
 	private static WeatherProvider instance;
 	private String[] weather = {"SUN", "RAIN", "FOG", "SNOW"};
 
-	private static WeatherProvider getInstance()
+	public static WeatherProvider getInstance()
 	{
 		if (instance == null)
 			instance = new WeatherProvider();
@@ -12,13 +12,13 @@ public class WeatherProvider {
 		return instance;
 	}
 
-	public String getCurrrentWeather(Coordinates coordinates_)
+	public String getCurrrentWeather(Coordinates p_coordinates)
 	{
 		int rand = (int)(Math.random() * 101);
 		if (rand == 0)
 			rand++;
 			
-		int total = coordinates_.getHeight() + coordinates_.getLatitude() + coordinates_.getLongitude();
+		int total = p_coordinates.getHeight() + p_coordinates.getLatitude() + p_coordinates.getLongitude();
 		return this.weather[(total / rand) % 4];
 	}
 }

@@ -1,9 +1,14 @@
 package aircraft;
 
-public interface Flyable {
-	public void updateConditions(String weather);
+import srcs.WeatherTower;
 
-	// public void registerTower(WeatherTower *p_tower);
+public abstract class Flyable {
 
-	// public void unregisterTower(Flyable *p_flyable);
+	protected WeatherTower weatherTower;
+
+	public abstract void updateConditions(String weather);
+	public void registerTower(WeatherTower p_tower)
+	{
+		this.weatherTower = p_tower;
+	}
 }

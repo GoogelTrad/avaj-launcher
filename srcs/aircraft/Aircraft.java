@@ -1,17 +1,17 @@
 package aircraft;
 import srcs.Coordinates;
 
-public abstract class Aircraft implements Flyable
+public abstract class Aircraft extends Flyable
 {
 	protected long id;
 	protected String name;
 	protected Coordinates coordinates;
 
-	public Aircraft(long id_, String name_, Coordinates coordinates_)
+	protected Aircraft(long p_id, String p_name, Coordinates p_coordinates)
 	{
-		this.id = id_;
-		this.name = name_;
-		this.coordinates = coordinates_;
+		this.id = p_id;
+		this.name = p_name;
+		this.coordinates = p_coordinates;
 	}
 
 	public Coordinates getCoordinates()

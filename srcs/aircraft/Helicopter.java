@@ -1,12 +1,13 @@
 package aircraft;
 
 import srcs.Coordinates;
+import srcs.WeatherTower;
 
 public class Helicopter extends Aircraft
 {
-	public Helicopter(long id_, String name_, Coordinates coordinates_)
+	public Helicopter(long p_id, String p_name, Coordinates p_coordinates)
 	{
-		super(id_, name_, coordinates_);
+		super(p_id, p_name, p_coordinates);
 	}
 
 	public void updateConditions(String weather)
